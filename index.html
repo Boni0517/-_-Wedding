@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>김수환 ♥ 장윤영 결혼합니다</title>
 <meta property="og:title" content="김수환 ♥ 장윤영 결혼합니다">
-<meta property="og:description" content="2026년 9월 19일 토요일 · 반얀트리 호텔 페스타 바이 충후 1F">
+<meta property="og:description" content="2026년 9월 19일 토요일">
 <meta property="og:image" content="cover.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -190,17 +190,17 @@ font-size:11px;
 .cal-grid .sat{ color:var(--brass); }
 .cal-grid .the-day{
 position:relative;
-color:var(--ivory);
-font-weight:600;
+color:var(--ink);
+font-weight:700;
 }
 .cal-grid .the-day::before{
-content:'';
+content:'♥';
 position:absolute;
 top:50%; left:50%;
-transform:translate(-50%,-50%);
-width:26px; height:26px;
-background:var(--brass);
-border-radius:50%;
+transform:translate(-50%,-54%);
+font-size:32px;
+line-height:1;
+color:var(--brass);
 z-index:-1;
 }
 .dday{
@@ -277,6 +277,35 @@ font-size:26px;
 background:none;
 border:none;
 cursor:pointer;
+}
+.lightbox-nav{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(255,255,255,0.12);
+border:none;
+color:#fff;
+width:44px; height:44px;
+border-radius:50%;
+font-size:22px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+-webkit-tap-highlight-color:transparent;
+}
+.lightbox-nav:active{ background:rgba(255,255,255,0.25); }
+.lightbox-prev{ left:14px; }
+.lightbox-next{ right:14px; }
+.lightbox-counter{
+position:absolute;
+bottom:28px;
+left:50%;
+transform:translateX(-50%);
+color:rgba(255,255,255,0.75);
+font-family:'Cormorant Garamond', serif;
+font-size:14px;
+letter-spacing:0.1em;
 }
 .account-toggle-wrap{
 max-width:320px;
@@ -447,16 +476,15 @@ transform-origin:bottom;
 <h2 class="section-title">저희 두 사람, 결혼합니다</h2>
 <p class="section-sub">We are getting married</p>
 <p class="greeting-text">
-각자의 자리에서 서로를 향해 걸어온 두 사람이<br>
-이제 같은 곳을 바라보며 걸어가려 합니다.<br><br>
-이번 예식은 가까운 가족들만 모시고<br>
-조용히 준비하려 합니다.<br>
-마음으로 축하해 주시는 것만으로도<br>
-저희에게는 더없이 큰 힘이 됩니다.<br><br>
-귀한 걸음 대신 따뜻한 마음만 전해주시면<br>
-감사히 간직하겠습니다.
+함께한 7번째 가을,<br>
+저희 두 사람이 가정을 이룹니다.<br><br>
+감사한 분들을 모두 모시고 인사드리는 것이 도리이나,<br>
+두사람의 뜻에 따라 소규모로 식을 올리기로 하였습니다.<br><br>
+많은 분들을 초대하지 못하는 점 깊은 양해를 구합니다.<br>
+축하해주시는 마음 귀하게 간직하며<br>
+서로 아끼고 존중하며 잘 살겠습니다.
 </p>
-<p class="greeting-names">김수환 · 장윤영</p>
+<p class="greeting-names">김수환 장윤영 드림</p>
 </section>
 
 <!-- 3. 예식 안내 -->
@@ -476,9 +504,6 @@ transform-origin:bottom;
 </div>
 <p class="dday">신랑, 신부의 결혼식이 <b><span id="dday-num">--</span>일</b> 남았습니다</p>
 </div>
-<div class="divider"></div>
-<p class="venue-name">반얀트리 호텔 서울</p>
-<p class="venue-addr">페스타 바이 충후, 1F</p>
 </section>
 
 <!-- 4. 갤러리 -->
@@ -518,15 +543,19 @@ transform-origin:bottom;
 <div class="acc-group">
 <p class="acc-group-title">GROOM · 신랑측</p>
 <div class="acc-row">
-<span class="who">김수환</span>
-<span><span class="num">신한은행 110-456-715634</span><button class="copy-btn" data-copy="110-456-715634">복사</button></span>
+<span class="who">이정례</span>
+<span><span class="num">우체국 601-1610-2230-538</span><button class="copy-btn" data-copy="601-1610-2230-538">복사</button></span>
+</div>
+<div class="acc-row">
+<span class="who">김홍표</span>
+<span><span class="num">농협은행 356-1511-5708-43</span><button class="copy-btn" data-copy="356-1511-5708-43">복사</button></span>
 </div>
 </div>
 <div class="acc-group">
 <p class="acc-group-title">BRIDE · 신부측</p>
 <div class="acc-row">
-<span class="who">장윤영</span>
-<span><span class="num">농협은행 302-0794-729691</span><button class="copy-btn" data-copy="302-0794-729691">복사</button></span>
+<span class="who">김수현</span>
+<span><span class="num">농협은행 352-0592-6537-93</span><button class="copy-btn" data-copy="352-0592-6537-93">복사</button></span>
 </div>
 </div>
 </div>
@@ -559,7 +588,10 @@ transform-origin:bottom;
 <!-- 라이트박스 -->
 <div class="lightbox" id="lightbox">
 <button class="lightbox-close" id="lightboxClose">×</button>
+<button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="이전 사진">‹</button>
 <img id="lightboxImg" src="" alt="">
+<button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="다음 사진">›</button>
+<span class="lightbox-counter" id="lightboxCounter"></span>
 </div>
 
 <!-- 배경음악 -->
@@ -616,23 +648,74 @@ document.body.removeChild(ta);
 });
 });
 
-// ---------- 갤러리 라이트박스 ----------
+// ---------- 갤러리 라이트박스 (좌우로 넘기며 보기) ----------
 var lightbox = document.getElementById('lightbox');
 var lightboxImg = document.getElementById('lightboxImg');
-document.querySelectorAll('.g-item').forEach(function(item){
+var lightboxCounter = document.getElementById('lightboxCounter');
+var lightboxPrev = document.getElementById('lightboxPrev');
+var lightboxNext = document.getElementById('lightboxNext');
+
+var galleryImgs = Array.prototype.map.call(
+document.querySelectorAll('.g-item img'),
+function(img){ return img.src; }
+);
+var currentIndex = 0;
+
+function showImage(index){
+if(galleryImgs.length === 0) return;
+currentIndex = (index + galleryImgs.length) % galleryImgs.length;
+lightboxImg.src = galleryImgs[currentIndex];
+lightboxCounter.textContent = (currentIndex + 1) + ' / ' + galleryImgs.length;
+}
+
+document.querySelectorAll('.g-item').forEach(function(item, idx){
 item.addEventListener('click', function(){
 var img = item.querySelector('img');
 if(!img) return;
-lightboxImg.src = img.src;
+showImage(idx);
 lightbox.classList.add('open');
 });
 });
+
 document.getElementById('lightboxClose').addEventListener('click', function(){
 lightbox.classList.remove('open');
 });
+
+lightboxPrev.addEventListener('click', function(e){
+e.stopPropagation();
+showImage(currentIndex - 1);
+});
+lightboxNext.addEventListener('click', function(e){
+e.stopPropagation();
+showImage(currentIndex + 1);
+});
+
 lightbox.addEventListener('click', function(e){
 if(e.target === lightbox) lightbox.classList.remove('open');
 });
+
+// 키보드 좌우 화살표로도 넘기기
+document.addEventListener('keydown', function(e){
+if(!lightbox.classList.contains('open')) return;
+if(e.key === 'ArrowLeft') showImage(currentIndex - 1);
+if(e.key === 'ArrowRight') showImage(currentIndex + 1);
+if(e.key === 'Escape') lightbox.classList.remove('open');
+});
+
+// 터치 스와이프로 넘기기
+var touchStartX = 0;
+var touchEndX = 0;
+lightbox.addEventListener('touchstart', function(e){
+touchStartX = e.changedTouches[0].screenX;
+}, { passive:true });
+lightbox.addEventListener('touchend', function(e){
+touchEndX = e.changedTouches[0].screenX;
+var diff = touchEndX - touchStartX;
+if(Math.abs(diff) > 40){
+if(diff < 0){ showImage(currentIndex + 1); }
+else{ showImage(currentIndex - 1); }
+}
+}, { passive:true });
 
 // ---------- 방명록 (이 브라우저에만 저장됩니다) ----------
 var STORAGE_KEY = 'wedding_guestbook_v1';

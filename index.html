@@ -190,6 +190,7 @@ font-size:11px;
 .cal-grid .sat{ color:var(--brass); }
 .cal-grid .the-day{
 position:relative;
+z-index:0;
 color:var(--ink);
 font-weight:700;
 }
@@ -484,11 +485,12 @@ transform-origin:bottom;
 소규모로 식을 올리기로 하였습니다.<br><br>
 많은 분들을 초대하지 못하는 점<br> 
 깊은 양해를 구합니다.<br>
-축하해주시는 마음 귀하게 간직하며<br>
+축하해 주시는 마음 귀하게 간직하며<br>
 서로 아끼고 존중하며 잘 살겠습니다.
 </p>
-<p class="greeting-names">김홍표 이정례의 子 김수환<br>
-장용수 김수현의 女 장윤영 드림</p>
+<p class="greeting-names">김홍표·이정례의 子 김수환<br>
+장용수·김수현의 女 장윤영<br> 
+드림</p>
 </section>
 
 <!-- 3. 예식 안내 -->
@@ -756,7 +758,7 @@ bgm.play().then(function(){
 isPlaying = true;
 musicBtn.classList.add('playing');
 }).catch(function(){
-// 브라우저가 자동재생을 막은 경우: 사용자의 첫 터치/클릭/스크롤 시 재생
+// 브라우저가 자동재생을 막은 경우: 다음 상호작용에서 다시 시도
 });
 }
 
@@ -769,12 +771,13 @@ musicBtn.classList.remove('playing');
 // 페이지 로드 시 자동재생 시도
 window.addEventListener('load', startMusic);
 
-// 자동재생이 막혔을 경우를 대비해, 사용자의 첫 상호작용에서 재생
-['click','touchstart','scroll'].forEach(function(evt){
-document.addEventListener(evt, function onceHandler(){
+// 자동재생이 막혔을 경우를 대비해, 사용자가 상호작용할 때마다 재생을 재시도
+// (성공할 때까지 계속 시도하도록 once를 사용하지 않음)
+function retryStartOnInteraction(){
 if(!isPlaying){ startMusic(); }
-document.removeEventListener(evt, onceHandler);
-}, { once:true, passive:true });
+}
+['click','touchstart','scroll'].forEach(function(evt){
+document.addEventListener(evt, retryStartOnInteraction, { passive:true });
 });
 
 // 음악 버튼: 재생/정지 토글

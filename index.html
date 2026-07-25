@@ -707,45 +707,6 @@ else{ showImage(currentIndex - 1); }
 }
 }, { passive:true });
 
-// ---------- 방명록 (이 브라우저에만 저장됩니다) ----------
-var STORAGE_KEY = 'wedding_guestbook_v1';
-var guestList = document.getElementById('guestList');
-function escapeHtml(str){
-var div = document.createElement('div');
-div.textContent = str;
-return div.innerHTML;
-}
-function loadGuests(){
-var raw = localStorage.getItem(STORAGE_KEY);
-var list = raw ? JSON.parse(raw) : [];
-renderGuests(list);
-}
-function renderGuests(list){
-if(list.length === 0){
-guestList.innerHTML = '<p class="guest-empty">아직 남겨진 메시지가 없어요. 첫 메시지를 남겨주세요.</p>';
-return;
-}
-guestList.innerHTML = list.slice().reverse().map(function(g){
-return '<div class="guest-item"><p class="name">' + escapeHtml(g.name) + '</p><p class="msg">' + escapeHtml(g.msg) + '</p></div>';
-}).join('');
-}
-document.getElementById('guestForm').addEventListener('submit', function(e){
-e.preventDefault();
-var nameEl = document.getElementById('guestName');
-var msgEl = document.getElementById('guestMsg');
-var name = nameEl.value.trim();
-var msg = msgEl.value.trim();
-if(!name || !msg) return;
-var raw = localStorage.getItem(STORAGE_KEY);
-var list = raw ? JSON.parse(raw) : [];
-list.push({ name: name, msg: msg, ts: Date.now() });
-localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-renderGuests(list);
-nameEl.value = '';
-msgEl.value = '';
-});
-loadGuests();
-
 // ---------- 배경음악 ----------
 var bgm = document.getElementById('bgm');
 var musicBtn = document.getElementById('musicBtn');

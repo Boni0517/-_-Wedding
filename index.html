@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>김수환 ♥ 장윤영 결혼합니다</title>
+<meta property="og:title" content="김수환 ♥ 장윤영 결혼합니다">
+<meta property="og:description" content="2026년 9월 19일 토요일 · 반얀트리 호텔 페스타 바이 충후 1F">
+<meta property="og:image" content="images/cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+KR:wght@300;400;500;600&family=Pretendard:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#FBFAF6;
+    --ivory-deep:#F4F1EA;
+    --ink:#2B2A28;
+    --ink-soft:#6b6862;
+    --brass:#B9975B;
+    --brass-soft:#e4d7bc;
+    --line:#E4E0D6;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Pretendard','Noto Serif KR',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .page{
+    max-width:480px;
+    margin:0 auto;
+    background:var(--ivory);
+    min-height:100vh;
+    position:relative;
+  }
+
+  /* -------- 공통 -------- */
+  .eyebrow{
+    font-family:'Cormorant Garamond', serif;
+    letter-spacing:0.35em;
+    font-size:12px;
+    color:var(--brass);
+    text-transform:uppercase;
+  }
+  .divider{
+    width:1px;
+    height:44px;
+    background:linear-gradient(var(--brass), transparent);
+    margin:24px auto;
+  }
+  .ring-mark{
+    width:34px; height:20px;
+    margin:0 auto;
+  }
+  section{
+    padding:88px 32px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  section:last-of-type{ border-bottom:none; }
+  h2.section-title{
+    font-family:'Noto Serif KR', serif;
+    font-weight:500;
+    font-size:20px;
+    letter-spacing:0.05em;
+    margin-bottom:8px;
+  }
+  .section-sub{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    color:var(--ink-soft);
+    font-size:14px;
+    margin-bottom:48px;
+  }
+
+  /* -------- 1. HERO -------- */
+  .hero{
+    height:100vh;
+    min-height:680px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    padding:40px 32px;
+    background:
+      radial-gradient(ellipse at top, #ffffff 0%, var(--ivory) 55%);
+    border-bottom:none;
+  }
+  .hero-photo{
+    width:100%;
+    max-width:280px;
+    aspect-ratio:3/4;
+    background:linear-gradient(160deg,#efece3,#dfd9c8);
+    border-radius:2px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#a39d8c;
+    font-size:12px;
+    letter-spacing:0.15em;
+    margin-bottom:36px;
+    overflow:hidden;
+  }
+  .hero-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .hero-names{
+    font-family:'Noto Serif KR', serif;
+    font-weight:400;
+    font-size:28px;
+    letter-spacing:0.08em;
+    line-height:1.6;
+  }
+  .hero-names .amp{
+    display:block;
+    font-family:'Cormorant Garamond', serif;
+    font-size:16px;
+    color:var(--brass);
+    letter-spacing:0.3em;
+    margin:6px 0;
+  }
+  .hero-date{
+    margin-top:22px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:17px;
+    letter-spacing:0.12em;
+    color:var(--ink-soft);
+  }
+  .scroll-cue{
+    position:absolute;
+    bottom:34px;
+    left:50%;
+    transform:translateX(-50%);
+    width:1px;
+    height:46px;
+    background:var(--line);
+    overflow:hidden;
+  }
+  .scroll-cue::after{
+    content:'';
+    position:absolute;
+    top:-46px;
+    left:0;
+    width:100%;
+    height:100%;
+    background:var(--brass);
+    animation:scrollDown 2.2s ease-in-out infinite;
+  }
+  @keyframes scrollDown{
+    0%{ top:-46px; }
+    60%{ top:46px; }
+    100%{ top:46px; }
+  }
+
+  /* -------- 2. 인사말 -------- */
+  .greeting-text{
+    font-family:'Noto Serif KR', serif;
+    font-weight:300;
+    font-size:15.5px;
+    line-height:2.05;
+    color:var(--ink);
+    word-break:keep-all;
+  }
+  .greeting-names{
+    margin-top:40px;
+    font-size:14px;
+    color:var(--ink-soft);
+    letter-spacing:0.03em;
+  }
+
+  /* -------- 3. 캘린더 -------- */
+  .calendar{
+    max-width:300px;
+    margin:0 auto 40px;
+  }
+  .cal-head{
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px;
+    letter-spacing:0.1em;
+    margin-bottom:20px;
+    color:var(--ink);
+  }
+  .cal-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    row-gap:14px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .cal-grid .dow{
+    font-family:'Cormorant Garamond', serif;
+    letter-spacing:0.05em;
+    color:#a39d8c;
+    font-size:11px;
+  }
+  .cal-grid .sat{ color:var(--brass); }
+  .cal-grid .the-day{
+    position:relative;
+    color:var(--ivory);
+    font-weight:600;
+  }
+  .cal-grid .the-day::before{
+    content:'';
+    position:absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:26px; height:26px;
+    background:var(--brass);
+    border-radius:50%;
+    z-index:-1;
+  }
+  .dday{
+    margin-top:26px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:15px;
+    color:var(--ink-soft);
+    letter-spacing:0.06em;
+  }
+  .dday b{ color:var(--brass); font-weight:600; }
+
+  .venue-name{
+    font-family:'Noto Serif KR', serif;
+    font-size:17px;
+    margin-bottom:6px;
+  }
+  .venue-addr{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin-bottom:24px;
+  }
+  .map-actions{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:11px 20px;
+    font-size:12.5px;
+    letter-spacing:0.05em;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    text-decoration:none;
+    background:transparent;
+    cursor:pointer;
+    border-radius:2px;
+    transition:background .2s ease, color .2s ease;
+  }
+  .btn:hover{ background:var(--ink); color:var(--ivory); }
+
+  /* -------- 4. 갤러리 -------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:6px;
+  }
+  .g-item{
+    aspect-ratio:3/4;
+    background:linear-gradient(160deg,#efece3,#e2ddce);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#a39d8c;
+    font-size:10px;
+    overflow:hidden;
+    cursor:pointer;
+  }
+  .g-item img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+  .lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(20,19,17,0.92);
+    z-index:100;
+    align-items:center;
+    justify-content:center;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox img{ max-width:90%; max-height:80%; }
+  .lightbox-close{
+    position:absolute;
+    top:24px; right:28px;
+    color:#fff;
+    font-size:26px;
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+
+  /* -------- 5. 계좌번호 -------- */
+  .account-toggle-wrap{
+    max-width:320px;
+    margin:0 auto;
+  }
+  .acc-toggle-btn{
+    width:100%;
+    padding:14px;
+    background:var(--ivory-deep);
+    border:none;
+    font-size:13.5px;
+    letter-spacing:0.04em;
+    color:var(--ink);
+    cursor:pointer;
+    border-radius:2px;
+  }
+  .acc-panel{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+  }
+  .acc-panel.open{ max-height:600px; }
+  .acc-group{
+    text-align:left;
+    padding:20px 4px 4px;
+  }
+  .acc-group-title{
+    font-family:'Cormorant Garamond', serif;
+    letter-spacing:0.1em;
+    font-size:12.5px;
+    color:var(--brass);
+    margin-bottom:10px;
+  }
+  .acc-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    font-size:13px;
+  }
+  .acc-row .who{ color:var(--ink-soft); }
+  .acc-row .num{ letter-spacing:0.02em; }
+  .copy-btn{
+    background:none;
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    font-size:11px;
+    padding:4px 8px;
+    border-radius:2px;
+    cursor:pointer;
+    margin-left:8px;
+  }
+
+  /* -------- 6. 방명록 -------- */
+  .guest-form{
+    max-width:320px;
+    margin:0 auto 32px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .guest-form input, .guest-form textarea{
+    font-family:'Pretendard', sans-serif;
+    border:none;
+    border-bottom:1px solid var(--line);
+    background:transparent;
+    padding:10px 4px;
+    font-size:13.5px;
+    color:var(--ink);
+    outline:none;
+  }
+  .guest-form textarea{ resize:none; height:64px; }
+  .guest-form button{
+    margin-top:6px;
+    align-self:center;
+  }
+  .guest-list{
+    max-width:320px;
+    margin:0 auto;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .guest-item{
+    padding-bottom:14px;
+    border-bottom:1px solid var(--line);
+  }
+  .guest-item .name{
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  .guest-item .msg{
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    word-break:break-word;
+  }
+  .guest-empty{
+    font-size:12.5px;
+    color:#a39d8c;
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+  }
+
+  /* -------- footer -------- */
+  .footer{
+    padding:70px 32px 100px;
+    text-align:center;
+  }
+  .footer-mark{
+    font-family:'Cormorant Garamond', serif;
+    font-size:14px;
+    letter-spacing:0.3em;
+    color:var(--brass);
+    margin-bottom:14px;
+  }
+  .footer-text{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.9;
+  }
+
+  /* -------- 배경음악 버튼 -------- */
+  .music-btn{
+    position:fixed;
+    bottom:22px;
+    right:22px;
+    width:44px; height:44px;
+    border-radius:50%;
+    background:var(--ivory);
+    border:1px solid var(--line);
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index:50;
+  }
+  .music-btn svg{ width:18px; height:18px; }
+  .music-btn.playing svg .bar{
+    animation:eq 0.8s ease-in-out infinite alternate;
+    transform-origin:bottom;
+  }
+  .music-btn .bar:nth-child(2){ animation-delay:.15s; }
+  .music-btn .bar:nth-child(3){ animation-delay:.3s; }
+  @keyframes eq{ from{ transform:scaleY(0.3); } to{ transform:scaleY(1); } }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <p class="eyebrow">Happy Wedding Day</p>
+    <div class="divider"></div>
+    <div class="hero-photo">
+      <!-- 여기에 대표 사진을 넣어주세요: <img src="images/cover.jpg" alt="김수환 장윤영"> -->
+      MAIN PHOTO
+    </div>
+    <p class="hero-names">
+      김수환
+      <span class="amp">&amp;</span>
+      장윤영
+    </p>
+    <p class="hero-date">2026. 09. 19 SAT</p>
+    <div class="scroll-cue"></div>
+  </section>
+
+  <!-- 2. 인사말 -->
+  <section id="greeting">
+    <p class="eyebrow">Our News</p>
+    <h2 class="section-title">저희 두 사람, 결혼합니다</h2>
+    <p class="section-sub">We are getting married</p>
+    <p class="greeting-text">
+      각자의 자리에서 서로를 향해 걸어온 두 사람이<br>
+      이제 같은 곳을 바라보며 걸어가려 합니다.<br><br>
+      이번 예식은 가까운 가족들만 모시고<br>
+      조용히 준비하려 합니다.<br>
+      마음으로 축하해 주시는 것만으로도<br>
+      저희에게는 더없이 큰 힘이 됩니다.<br><br>
+      귀한 걸음 대신 따뜻한 마음만 전해주시면<br>
+      감사히 간직하겠습니다.
+    </p>
+    <p class="greeting-names">김수환 · 장윤영</p>
+  </section>
+
+  <!-- 3. 예식 안내 -->
+  <section id="info">
+    <p class="eyebrow">Wedding Day</p>
+    <h2 class="section-title">예식 안내</h2>
+    <p class="section-sub">2026. 09. 19 Saturday</p>
+
+    <div class="calendar">
+      <p class="cal-head">2026. 09</p>
+      <div class="cal-grid">
+        <span class="dow">일</span><span class="dow">월</span><span class="dow">화</span><span class="dow">수</span><span class="dow">목</span><span class="dow">금</span><span class="dow sat">토</span>
+        <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span class="sat">5</span>
+        <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="sat">12</span>
+        <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span class="the-day">19</span>
+        <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span class="sat">26</span>
+        <span>27</span><span>28</span><span>29</span><span>30</span><span></span><span></span><span></span>
+      </div>
+      <p class="dday">신랑, 신부의 결혼식이 <b><span id="dday-num">--</span>일</b> 남았습니다</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="venue-name">반얀트리 호텔 서울</p>
+    <p class="venue-addr">페스타 바이 충후, 1F</p>
+  </section>
+
+  <!-- 4. 갤러리 -->
+  <section id="gallery">
+    <p class="eyebrow">Gallery</p>
+    <h2 class="section-title">우리의 순간들</h2>
+    <p class="section-sub">사진을 눌러 크게 볼 수 있어요</p>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- 사진 20장을 아래처럼 교체하세요 (메인 사진은 상단 MAIN PHOTO 자리를 따로 사용하세요):
+      <div class="g-item"><img src="images/1.jpg" alt=""></div>
+      -->
+      <div class="g-item">1</div>
+      <div class="g-item">2</div>
+      <div class="g-item">3</div>
+      <div class="g-item">4</div>
+      <div class="g-item">5</div>
+      <div class="g-item">6</div>
+      <div class="g-item">7</div>
+      <div class="g-item">8</div>
+      <div class="g-item">9</div>
+      <div class="g-item">10</div>
+      <div class="g-item">11</div>
+      <div class="g-item">12</div>
+      <div class="g-item">13</div>
+      <div class="g-item">14</div>
+      <div class="g-item">15</div>
+      <div class="g-item">16</div>
+      <div class="g-item">17</div>
+      <div class="g-item">18</div>
+      <div class="g-item">19</div>
+      <div class="g-item">20</div>
+    </div>
+  </section>
+
+  <!-- 5. 마음 전하실 곳 -->
+  <section id="account">
+    <p class="eyebrow">Gift</p>
+    <h2 class="section-title">마음 전하실 곳</h2>
+    <p class="section-sub">참석이 어려우신 분들을 위해 안내드립니다</p>
+    <div class="account-toggle-wrap">
+      <button class="acc-toggle-btn" id="accToggleBtn">계좌번호 보기 ▾</button>
+      <div class="acc-panel" id="accPanel">
+        <div class="acc-group">
+          <p class="acc-group-title">GROOM · 신랑측</p>
+          <div class="acc-row">
+            <span class="who">김수환</span>
+            <span><span class="num">신한은행 110-456-715634</span><button class="copy-btn" data-copy="110-456-715634">복사</button></span>
+          </div>
+        </div>
+        <div class="acc-group">
+          <p class="acc-group-title">BRIDE · 신부측</p>
+          <div class="acc-row">
+            <span class="who">장윤영</span>
+            <span><span class="num">농협은행 302-0794-729691</span><button class="copy-btn" data-copy="302-0794-729691">복사</button></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 방명록 -->
+  <section id="guestbook">
+    <p class="eyebrow">Guestbook</p>
+    <h2 class="section-title">축하 메시지</h2>
+    <p class="section-sub">따뜻한 한마디를 남겨주세요</p>
+
+    <form class="guest-form" id="guestForm">
+      <input type="text" id="guestName" placeholder="이름" maxlength="20" required>
+      <textarea id="guestMsg" placeholder="축하 메시지를 남겨주세요" maxlength="200" required></textarea>
+      <button type="submit" class="btn">메시지 남기기</button>
+    </form>
+
+    <div class="guest-list" id="guestList"></div>
+  </section>
+
+  <!-- footer -->
+  <div class="footer">
+    <p class="footer-mark">Thank You</p>
+    <p class="footer-text">
+      저희 두 사람의 새로운 시작을<br>
+      함께 축복해 주셔서 감사합니다.
+    </p>
+  </div>
+
+</div>
+
+<!-- 라이트박스 -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">×</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<!-- 배경음악 -->
+<audio id="bgm" loop preload="none">
+  <!-- 배경음악 파일을 넣어주세요: <source src="music/bgm.mp3" type="audio/mpeg"> -->
+</audio>
+<button class="music-btn" id="musicBtn" aria-label="배경음악 재생/정지">
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect class="bar" x="4" y="9" width="3" height="6" rx="1" fill="#B9975B"/>
+    <rect class="bar" x="10.5" y="5" width="3" height="14" rx="1" fill="#B9975B"/>
+    <rect class="bar" x="17" y="9" width="3" height="6" rx="1" fill="#B9975B"/>
+  </svg>
+</button>
+
+<script>
+  // ---------- D-day 계산 ----------
+  (function(){
+    var wedding = new Date('2026-09-19T00:00:00');
+    var today = new Date();
+    today.setHours(0,0,0,0);
+    var diff = Math.ceil((wedding - today) / (1000*60*60*24));
+    var el = document.getElementById('dday-num');
+    if(diff > 0){ el.textContent = diff; }
+    else if(diff === 0){ el.parentNode.innerHTML = '오늘은 두 사람이 결혼하는 날입니다 🎉'; }
+    else { el.parentNode.textContent = '두 사람은 부부가 되었습니다'; }
+  })();
+
+  // ---------- 계좌번호 토글 ----------
+  var accBtn = document.getElementById('accToggleBtn');
+  var accPanel = document.getElementById('accPanel');
+  accBtn.addEventListener('click', function(){
+    var isOpen = accPanel.classList.toggle('open');
+    accBtn.textContent = isOpen ? '계좌번호 닫기 ▴' : '계좌번호 보기 ▾';
+  });
+
+  // ---------- 계좌번호 복사 ----------
+  document.querySelectorAll('.copy-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var text = btn.getAttribute('data-copy');
+      if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(text).then(function(){
+          var prev = btn.textContent;
+          btn.textContent = '복사됨';
+          setTimeout(function(){ btn.textContent = prev; }, 1500);
+        });
+      } else {
+        // 구형 브라우저 대응
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        try{ document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta);
+      }
+    });
+  });
+
+  // ---------- 갤러리 라이트박스 (실제 이미지가 들어간 항목만 확대) ----------
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('.g-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var img = item.querySelector('img');
+      if(!img) return; // 아직 사진이 없는 자리는 무시
+      lightboxImg.src = img.src;
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lightboxClose').addEventListener('click', function(){
+    lightbox.classList.remove('open');
+  });
+  lightbox.addEventListener('click', function(e){
+    if(e.target === lightbox) lightbox.classList.remove('open');
+  });
+
+  // ---------- 방명록 (이 브라우저에만 저장됩니다) ----------
+  var STORAGE_KEY = 'wedding_guestbook_v1';
+  var guestList = document.getElementById('guestList');
+
+  function escapeHtml(str){
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function loadGuests(){
+    var raw = localStorage.getItem(STORAGE_KEY);
+    var list = raw ? JSON.parse(raw) : [];
+    renderGuests(list);
+  }
+
+  function renderGuests(list){
+    if(list.length === 0){
+      guestList.innerHTML = '<p class="guest-empty">아직 남겨진 메시지가 없어요. 첫 메시지를 남겨주세요.</p>';
+      return;
+    }
+    guestList.innerHTML = list.slice().reverse().map(function(g){
+      return '<div class="guest-item"><p class="name">' + escapeHtml(g.name) + '</p><p class="msg">' + escapeHtml(g.msg) + '</p></div>';
+    }).join('');
+  }
+
+  document.getElementById('guestForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var nameEl = document.getElementById('guestName');
+    var msgEl = document.getElementById('guestMsg');
+    var name = nameEl.value.trim();
+    var msg = msgEl.value.trim();
+    if(!name || !msg) return;
+
+    var raw = localStorage.getItem(STORAGE_KEY);
+    var list = raw ? JSON.parse(raw) : [];
+    list.push({ name: name, msg: msg, ts: Date.now() });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    renderGuests(list);
+
+    nameEl.value = '';
+    msgEl.value = '';
+  });
+
+  loadGuests();
+
+  // ---------- 배경음악 ----------
+  var bgm = document.getElementById('bgm');
+  var musicBtn = document.getElementById('musicBtn');
+  var isPlaying = false;
+  musicBtn.addEventListener('click', function(){
+    if(!bgm.querySelector('source')){
+      alert('배경음악 파일이 아직 등록되지 않았어요.\n\nindex.html의 <audio id="bgm"> 안에\n<source src="music/bgm.mp3" type="audio/mpeg"> 를 추가해주세요.');
+      return;
+    }
+    if(isPlaying){
+      bgm.pause();
+      musicBtn.classList.remove('playing');
+    } else {
+      bgm.play().catch(function(){});
+      musicBtn.classList.add('playing');
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+
+</body>
+</html>

@@ -489,8 +489,7 @@ transform-origin:bottom;
 서로 아끼고 존중하며 잘 살겠습니다.
 </p>
 <p class="greeting-names">김홍표·이정례의 子 김수환<br>
-장용수·김수현의 女 장윤영<br> 
-드림</p>
+장용수·김수현의 女 장윤영</p>
 </section>
 
 <!-- 3. 예식 안내 -->
@@ -768,16 +767,18 @@ isPlaying = false;
 musicBtn.classList.remove('playing');
 }
 
-// 페이지 로드 시 자동재생 시도
+// 페이지 로드 시 자동재생 시도 (브라우저가 허용하는 환경에서는 바로 재생됨)
 window.addEventListener('load', startMusic);
 
-// 자동재생이 막혔을 경우를 대비해, 사용자가 상호작용할 때마다 재생을 재시도
-// (성공할 때까지 계속 시도하도록 once를 사용하지 않음)
+// 대부분의 브라우저는 사용자 동작 없이는 소리 재생을 막기 때문에,
+// 사용자의 첫 상호작용에서 가능한 한 빠르게 재생을 시도한다.
+// capture:true로 등록해서 다른 클릭 핸들러보다 먼저 반응하게 하고,
+// 성공할 때까지 계속 재시도한다 (once를 쓰지 않음).
 function retryStartOnInteraction(){
 if(!isPlaying){ startMusic(); }
 }
-['click','touchstart','scroll'].forEach(function(evt){
-document.addEventListener(evt, retryStartOnInteraction, { passive:true });
+['pointerdown','touchstart','click','scroll','keydown'].forEach(function(evt){
+document.addEventListener(evt, retryStartOnInteraction, { passive:true, capture:true });
 });
 
 // 음악 버튼: 재생/정지 토글
